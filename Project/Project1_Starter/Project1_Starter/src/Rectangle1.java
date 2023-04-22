@@ -49,7 +49,7 @@ public class Rectangle1 {
         // Attempts to open the file and scan through it
         try {
         	// takes the first command line argument and opens that file
-            file = new File("C:\\Users\\Fci\\Desktop\\course_files_export\\Project 1\\P1test2.txt");
+            file = new File("C:\\Users\\Fci\\Desktop\\course_files_export\\Project\\P1test2.txt");
            
         	
             // creates a scanner object

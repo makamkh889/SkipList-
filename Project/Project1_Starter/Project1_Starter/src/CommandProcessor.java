@@ -47,13 +47,13 @@ public class CommandProcessor {
 		Arrays.toString(arr);
 
 		if (arr[0].equals("search")) {
-			System.out.println("<1>");
+
 			if (arr.length != 2)
 				System.out.println("rejected values");
 			else
 				data.search(arr[1]);
 		} else if (arr[0].equals("insert")) {
-			System.out.println("<2>");
+
 			if (arr.length != 6) {
 				System.out.println("rejected values");
 			} else {
@@ -68,23 +68,22 @@ public class CommandProcessor {
 			if (arr.length != 2) {
 				System.out.println("rejected values");
 			} else {
-				System.out.println("<3>");
 				data.remove(arr[1]);
 			}
 		}
 
 		else if (arr[0].equals("remove")) {
-			System.out.println("<4>");
+			
 			if (arr.length != 5) {
 				System.out.println("rejected values");
 			} else {
-				data.remove(Integer.parseInt(arr[1], 10), Integer.parseInt(arr[2], 10), Integer.parseInt(arr[3], 10),
-						Integer.parseInt(arr[4], 10));
+
+				data.remove(Integer.parseInt(arr[1]), Integer.parseInt(arr[2], 10), Integer.parseInt(arr[3], 10),
+						Integer.parseInt(arr[4]));
 			}
 		}
 
 		else if (arr[0].equals("regionsearch")) {
-			System.out.println("<5>");
 			if (arr.length != 5) {
 				System.out.println("rejected values");
 			} else {
@@ -94,16 +93,16 @@ public class CommandProcessor {
 		}
 
 		else if (arr[0].equals("intersections")) {
-			System.out.println("<6>");
 			if (arr.length != 1) {
 				System.out.println("rejected values");
 			} else {
+
 				data.intersections();
 			}
 		}
 
 		else if (arr[0].equals("dump")) {
-			System.out.println("<7>");
+
 			if (arr.length != 1) {
 				System.out.println("rejected values");
 			} else {

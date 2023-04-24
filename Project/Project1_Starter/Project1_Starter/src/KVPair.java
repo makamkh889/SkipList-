@@ -83,7 +83,7 @@
      *
      * @return A human readable string representing the KVPair object
      */
-    public String toString(Rectangle R) {
-        return "(" + key + ", " + R.toString()+ ")";
+    public String toString() {
+        return "(" + key + ", " + value+ ")";
     }
 }

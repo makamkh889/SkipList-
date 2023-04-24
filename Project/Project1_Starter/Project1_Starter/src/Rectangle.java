@@ -78,7 +78,8 @@ public class Rectangle {
 	}
 
 	public boolean intersecting(Rectangle Rec2) {
-		 // Check if the rectangles intersect by checking if their x, y, width, and height values overlap
+		// Check if the rectangles intersect by checking if their x, y, width, and
+		// height values overlap
 		return x < Rec2.x + Rec2.width && x + width > Rec2.x && y < Rec2.y + Rec2.height && y + height > Rec2.y;
 	}
 
@@ -88,5 +89,12 @@ public class Rectangle {
 
 	}
 
-	
+	public boolean equalto(Object o) {
+		Rectangle R = (Rectangle) o;
+		if (x == R.x && y == R.y && width == R.width && height == R.height)
+			return true;
+		return false;
+
+	}
+
 }

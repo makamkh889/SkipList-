@@ -80,7 +80,7 @@ public class Database {
 		if (result == null) {
 			System.out.println("Rectangle not removed: (" + name + ')');
 		} else {
-			System.out.println("Rectangle removed: " + result.toString(result.getValue()));
+			System.out.println("Rectangle removed: " + result.toString());
 		}
 		/*
 		 * Iterator<KVPair<String, Rectangle>> itr; boolean check = false;
@@ -121,7 +121,7 @@ public class Database {
 		if (result == null) {
 			System.out.println("Rectangle not removed: (" + R.toString() + ')');
 		} else {
-			System.out.println("Rectangle removed: " + result.toString(R));
+			System.out.println("Rectangle removed: " + result.toString());
 		}
 
 		/*
@@ -190,9 +190,10 @@ public class Database {
 	 */
 	public void intersections() {
 
-		 Iterator<KVPair<String, Rectangle>> itr1 = list.iterator();
+		 Iterator<KVPair<String, Rectangle>> itr1;
 		 Iterator<KVPair<String, Rectangle>> itr2;
 		System.out.println("Intersections pairs:");
+		
 		for (itr1 = list.iterator(); itr1.hasNext();) {
 			KVPair<String, Rectangle> p1 = itr1.next();
 			String name1 = p1.getKey();
@@ -203,10 +204,10 @@ public class Database {
 				String name2 = p2.getKey();
 				Rectangle R2 = p2.getValue();
 				if (R1.intersecting(R2) && R1 != R2) {
-
-					System.out.println(name1 + ',' + R1.getX() + ',' + R1.getY() + ',' + R1.getHeight() + ','
-							+ R1.getWidth() + ',' + " | " + name2 + ',' + R2.getX() + ',' + R2.getY() + ','
-							+ R2.getHeight() + ',' + R2.getWidth());
+					System.out.println(p1.toString()+'|'+p2.toString());
+					//System.out.println(name1 + ',' + R1.getX() + ',' + R1.getY() + ',' + R1.getHeight() + ','
+							//+ R1.getWidth() + ',' + " | " + name2 + ',' + R2.getX() + ',' + R2.getY() + ','
+						//	+ R2.getHeight() + ',' + R2.getWidth());
 
 				}
 			}
